@@ -1,8 +1,11 @@
+# Smarturl-frontend
+ A Django App for smarturl backend
+
+
+
+
 
 <h2>Working Version</h2>
-
-
-
 
 When both frontend and backend are correctly deployed, it should work exactly like the live demo<br>
 <a href="https://test.learnershub.co.za/" target="_blank">Link to Live Demo</a>
