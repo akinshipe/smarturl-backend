@@ -1,8 +1,11 @@
+# Smarturl-Backend
+ A Django App for smarturl backend
+
+
+
+
 
 <h2>Working Version</h2>
-
-
-
 
 When both frontend and backend are correctly deployed, it should work exactly like the live demo<br>
 <a href="https://test.learnershub.co.za/" target="_blank">Link to Live Demo</a>
@@ -36,11 +39,14 @@ When both frontend and backend are correctly deployed, it should work exactly li
 
 Since there are 1001 possible hosting deployment choices, these deployment instructions will only be specific to configuring the app to work as intended and not about the actual process of deploying the app to a specific provider.
 
+Pull the resipotory to your local machine, or destination server
+
 1. 	Like all other Django apps, the app's entry point is the wsgi.py file in the project directory(smarturl/wsgi.py). 
 2. 	If you are going to access the Rest framework web API view of this application, please make sure to add  the URL where you deployed the app to the ALLOWED_HOST list  on line     28 in smarturl/settings.py
 3.	 Make sure to update the BASE_URL constant in api/views.py  to the full URL path you are hosting the ReactJs frontend app. Make sure the path ends with a backslash. Do not       forget to ensure the proper protocol (http//: or https//:) is used to avoid unpredictable behaviour. if you are deploying on localhost, you may not need to change it.
 4.	 Make sure to add the exact BASE_URL you changed in step 3 above to CORS_ORIGIN_WHITELIST settings in smarturl/settings.py. if you are deploying on local host you may not need to do this.
-5.	 A requirements.txt file has been included in the root directory. Run pip install -r requirements.txt while in your virtual environment to install all the packages required       by this application
-6.	 If you do not want to use the SQlite database and want to deploy another type of database. Remember to update the database settings in the settings.py file.
+5.	 In all of the views in the api/views.py file. the first line in the request method is pausing execution of the script(by calling the time.sleep() method of the time package). This was implemented to simulate network latency as the application was built on localhost where there is no network latency. if you are hosing outside localhost you may comment the lines out.
+6.	 A requirements.txt file has been included in the root directory. Run pip install -r requirements.txt while in your virtual environment to install all the packages required       by this application
+7.	 If you do not want to use the SQlite database and want to deploy another type of database. Remember to update the database settings in the settings.py file.
 Also, you need to make new migrations and migrate the database schema to the new database by running "manage.py makemigrations" and 'manage.py migrate' 
 8.	Follow other deployment steps advised by your hosting provider and environment
