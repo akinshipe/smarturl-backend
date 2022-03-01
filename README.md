@@ -50,3 +50,6 @@ Pull the resipotory to your local machine, or destination server
 7.	 If you do not want to use the SQlite database and want to deploy another type of database. Remember to update the database settings in the settings.py file.
 Also, you need to make new migrations and migrate the database schema to the new database by running "manage.py makemigrations" and 'manage.py migrate' 
 8.	Follow other deployment steps advised by your hosting provider and environment
+
+
+Good Luck
