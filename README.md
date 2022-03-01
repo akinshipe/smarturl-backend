@@ -39,7 +39,7 @@ When both frontend and backend are correctly deployed, it should work exactly li
 
 Since there are 1001 possible hosting deployment choices, these deployment instructions will only be specific to configuring the app to work as intended and not about the actual process of deploying the app to a specific provider.
 
-Pull the resipotory to your local machine, or destination server
+Pull the repository to your local machine, or destination server
 
 1. 	Like all other Django apps, the app's entry point is the wsgi.py file in the project directory(smarturl/wsgi.py). 
 2. 	If you are going to access the Rest framework web API view of this application, please make sure to add  the URL where you deployed the app to the ALLOWED_HOST list  on line     28 in smarturl/settings.py
